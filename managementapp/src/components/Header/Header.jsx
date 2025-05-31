@@ -1,14 +1,14 @@
 import { Bell, BarChart3, Menu, ChevronDown } from 'lucide-react';
 import SearchBar from '../SearchBar/SearchBar';
 
-function Header() {
+function Header({ sidebarOpen, setSidebarOpen }) {
     return (<>
         <header className="lg:col-span-1">
             <div className="py-6 px-4 bg-white border-b border-gray-200 shadow-sm">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                         <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer">
-                            <Menu className="w-5 h-5 text-gray-600" />
+                            <Menu className="w-5 h-5 text-gray-600" onClick={() => setSidebarOpen(!sidebarOpen)} />
                         </button>
                         <div className='flex items-center space-x-3'>
                             <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center'>
